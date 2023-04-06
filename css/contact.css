@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(red, blue);
+}
+.container{
+    display: flex;
+    padding: 0px 120px;
+}
+header {
+    background-color: black;
+    width: 100%;
+    height: 150px;
+}
+header img{
+    width: 150px;
+    position: absolute;
+    top: 0px;
+
+}
+header .container {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .nav a{   
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    
+   
+    justify-content: center;
+    font-weight: 600;
+    
+    text-transform: uppercase;
+    margin-left: 20px;
+    
+    
+    font-size: 18.5px;
+    transition: all 0.3s ease;
+    line-height: 125px;
+}
+
+
+header .container .nav a:hover{
+    background-color: #30d8cd;
+    width: 100%;
+    margin-left: 0;
+  }
+  header .container .nav a{
+    width: 100%;
+    margin-left: 0;
+  }
+    
+
+   
+
+
+header .container .nav a.activ{
+    background-color: orangered;
+    width: 100%;
+    margin-left: 0px;
+   
+}
+main{
+    margin-top: 300px;
+}
+main h1{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+main a{
+    font-size: 50px;
+    margin-left: 30px;
+    position: relative;
+    left: 35%;
+
+animation: aanim 5s ease-in-out 1s infinite reverse;
+}
+    
+
+
+
+main a:nth-child(1){
+    color: #0088cc;
+    transition: 0.5s all ease;
+
+}
+main a:nth-child(1):hover{
+  transform: scale(2);
+  text-shadow: -15px -15px 5px #0088cc ;
+}
+main a:nth-child(2){
+    color: rgb(255, 0, 255);
+    transition: all 0.5s ease;
+}
+main a:nth-child(2):hover{
+    transform: scale(2);
+    text-shadow: -15px -15px 5px rgb(255, 0, 255) ;
+  }
+  .fr,
+    .menyu{
+     display: none;}
+main a:nth-child(3){
+    color: #0051ff;
+    transition: all 0.5s ease;
+}
+main a:nth-child(3):hover{
+    transform: scale(2);
+    text-shadow: -15px -15px 5px #0051ff;
+}
+
+main a:nth-child(4){
+    color: red;
+    transition: 0.5s all ease;
+}
+main a:nth-child(4):hover{
+    transform: scale(2);
+    text-shadow: -15px -15px 5px red;
+}
+div input{
+  display: flex;
+  opacity: 1;
+  
+}
+input{
+margin-left: 600px;
+padding: 10px 20px;
+background-color: white;
+border: 1px dashed black;
+border-radius: 80px;
+border-top-right-radius: 500px;
+border-top-left-radius:100px ;
+animation: inputanim 5s ease-in-out 0.5s infinite alternate;
+}
+input:nth-child(5){
+    margin-left: 650px;
+    animation: input5 5s ease 0.5s infinite alternate;
+    
+}
+@keyframes input5 {
+    0%{
+        background-color: #0051ff;
+        transform: scale(1.2) rotate(0deg);
+    }
+    10%{
+        background-color: #1EAAA0;
+        transform: scale(0.8) rotate(360deg);
+
+    }
+    20%{
+        background-color: black;
+        transform: scale(1.2) rotate(0deg);
+
+    }
+    30%{
+        background-color: brown;
+        transform: scale(0.8) rotate(360deg);
+
+    }
+    40%{
+        background-color: darkblue;
+        transform: scale(1.2);
+
+    }
+    50%{
+        background-color: darkolivegreen;
+        transform: scale(0.8);
+
+    }
+    60%{
+        background-color: mediumpurple;
+        transform: scale(1.2);
+
+    }
+    70%{
+        background-color: lightcoral;
+        transform: scale(0.8);
+
+    }
+    80%{
+        background-color: aqua;
+        transform: scale(1.2);
+
+    }
+    90%{
+        background-color: teal;
+        transform: scale(0.8);
+
+    }
+    100%{
+        background-color: lawngreen;
+        transform: scale(1.2) rotate(360deg);
+
+    }
+}
+@keyframes aanim{
+    0%{
+        color:white;
+    
+        
+    }
+    10%{
+        color: red;
+        
+    }
+    20%{
+        color: black;
+    }
+    30%{
+        transform: rotate(360deg);
+        color: aqua;
+        
+    }
+    40%{
+        transform: scale(1.5);
+        color: chocolate;
+        
+
+    }
+    50%{
+        transform: scale(0.8);
+        color: #0051ff;
+    }
+    80%{
+        opacity: 0.3;
+      
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+@keyframes inputanim{
+    0%{
+        background-color: #0051ff;
+        transform: scale(1.2);
+    }
+    10%{
+        background-color: #1EAAA0;
+        transform: scale(0.8);
+
+    }
+    20%{
+        background-color: black;
+        transform: scale(1.2);
+
+    }
+    30%{
+        background-color: brown;
+        transform: scale(0.8);
+
+    }
+    40%{
+        background-color: darkblue;
+        transform: scale(1.2);
+
+    }
+    50%{
+        background-color: darkolivegreen;
+        transform: scale(0.8);
+
+    }
+    60%{
+        background-color: mediumpurple;
+        transform: scale(1.2);
+
+    }
+    70%{
+        background-color: lightcoral;
+        transform: scale(0.8);
+
+    }
+    80%{
+        background-color: aqua;
+        transform: scale(1.2);
+
+    }
+    90%{
+        background-color: teal;
+        transform: scale(0.8);
+
+    }
+    100%{
+        background-color: lawngreen;
+        transform: scale(1.2);
+
+    }
+}
+@keyframes aanim{
+    0%{
+        color:white;
+    
+        
+    }
+    10%{
+        color: red;
+        
+    }
+    20%{
+        color: black;
+    }
+    30%{
+        transform: rotate(360deg);
+        color: aqua;
+        
+    }
+    40%{
+        transform: scale(1.5);
+        color: chocolate;
+        
+
+    }
+    50%{
+        transform: scale(0.8);
+        color: #0051ff;
+    }
+    80%{
+        opacity: 0.3;
+      
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+    .loading{
+        border:10px solid blue;
+        border-radius: 50%;
+        border-top: 10px solid white;
+        width: 50px;
+        height: 50px;
+        animation: rotate 2s linear infinite;
+        position:relative;
+        left: 130%;
+    }
+    
+    
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg); }
+       100%{
+        transform: rotate(360deg);
+       }
+    }
+    input,.menyu{
+        display: none;
+    }
+
+    @media (max-width:1150px) {
+
+    .menyu,
+    input {
+        display: inline-block;
+    }
+    .logo{
+        margin-top: -7px;
+    }
+    input{
+        position: absolute;
+        right: 25px;
+        top: 13px;
+    }
+    header {
+        padding: 7px 20px;
+        z-index: 123;
+    }
+  
+
+    .nav {
+        background-color: black;
+        top: 150px;
+        width: 40%;
+        height: 500px;
+        right: 1150px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        list-style: none;
+        position: absolute;
+        text-align: center;
+        transition: all ease 1s;
+        
+        
+    }
+     header .container .nav a{
+        line-height: 125px;
+        
+    }
+    
+
+    
+
+    input {
+        width: 30px;
+        height: 30px;
+        animation: none;
+        opacity: 0;
+    }
+    .er input{
+       
+         display: none;
+    }
+
+    .menyu {
+        position: absolute;
+        right: 60px;
+        top: 7px;
+
+    }
+    .menyu span{
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        border-radius: 5px;
+    }
+   
+    .menyu span:nth-child(1){
+        top: 7px;
+    }
+    .menyu span:nth-child(2){
+        top: 19px;
+    }
+    .menyu span:nth-child(3){
+        top: 32px;
+    }
+    input:checked~.nav{
+        left: 0px;
+    }
+}
+    
+    

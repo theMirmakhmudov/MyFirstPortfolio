@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(red, blue);
+}
+.container{
+    display: flex;
+    padding: 0px 120px;
+}
+header {
+    background-color: black;
+    width: 100%;
+    height: 150px;
+}
+header img{
+    width: 150px;
+
+}
+header .container {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    line-height: 150px;
+}
+header .container .nav a:hover{
+    background-color: #30d8cd;
+    margin-left: 0px;
+    width: 100%;
+}
+ .container .nav a.activ{
+    background-color:orangered;
+    width: 100%;
+    margin-left: 0;
+}
+header .container .nav a{
+width: 100%;
+margin-left: 0;
+}
+main{
+    margin-top: 300px;
+}
+main .container{
+    justify-content: center;
+}
+main .container h1{
+    color:rgba(20, 140, 245, 0.996);
+    font-size: 40px;
+    transition: all 0.6s ease-in-out;
+    text-transform: uppercase;
+}
+main .container div{
+    padding-left:20px;
+    position: relative;
+    width: 50%;
+}
+main .container div h1{
+    position: absolute;
+    top: 0px;
+    text-transform: uppercase;
+}
+main .container div h1:nth-child(1){
+    color: white;
+    animation: animation 2s ease-in-out 0s infinite alternate;
+}
+main .container div h1:nth-child(2){
+    color: white;
+    animation: animation 2s ease-in-out 2s infinite alternate;
+}
+@keyframes animation{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+        color: green;
+    }
+    45%{
+        opacity: 0;
+        color: red;
+    }
+    100%{
+        transform: translateY(60px);
+        opacity: 0;
+        color:white ;
+    }
+    
+}
+.menyu,
+    input {
+        display: none;
+    }
+    
+@media (max-width:1150px) {
+
+    .menyu,
+    input {
+        display: inline-block;
+    }
+    .logo{
+        margin-top: -7px;
+    }
+    input{
+        position: absolute;
+        right: 25px;
+        top: 13px;
+    }
+    header {
+        padding: 7px 20px;
+        z-index: 123;
+    }
+  
+
+    .nav {
+        background-color: black;
+        top: 150px;
+        width: 40%;
+        height: 500px;
+        left: -1150px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        list-style: none;
+        position: absolute;
+        text-align: center;
+        
+        transition: all ease 1s;
+        
+        
+    }
+     header .container .nav a{
+        line-height: 125px;
+        
+    }
+
+    
+
+    input {
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+    }
+    
+    .menyu {
+        position: absolute;
+        right: 60px;
+        top: 7px;
+
+    }
+    .menyu span{
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .menyu span:nth-child(1){
+        top: 7px;
+    }
+    .menyu span:nth-child(2){
+        top: 19px;
+    }
+    .menyu span:nth-child(3){
+        top: 32px;
+    }
+    input:checked~.nav{
+        left:  0px;
+    }
+    
+}

@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(red, blue);
+    
+}
+.container{
+    display: flex;
+    padding: 0px 120px;
+    
+}
+header {
+    background-color: black;
+    width: 100%;
+    height: 150px;
+}
+header img{
+    width: 150px;
+
+}
+header .container {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .nav a{
+    color: white;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    line-height: 125px;
+}
+.nav a:hover{
+    background-color: #30d8cd;
+}
+header .container .nav a.activ{
+    background-color: orangered;
+    width: 100%;
+    margin-left: 0;
+}
+header .container .nav a{
+    width: 100%;
+    margin-left: 0;
+}
+main{
+    margin-top: 240px;
+}
+main p{
+    font-size: 30px;
+    color:aqua;
+    position: absolute;
+    left: 720px;
+    animation: aboutanim 5s ease-in-out 0s infinite alternate;
+}
+main img{
+    width: 500px;
+    position: absolute;
+    top: 230px;
+    animation: aboutimg 5s ease-in-out 0s infinite alternate;
+    
+}
+.menyu,
+input{
+    display: none;
+}
+@keyframes aboutanim{
+    0%{
+    font-size: 30px;
+    color:aqua;
+    position: absolute;
+    left: 0px;
+    }
+    100%{
+        font: 35px;
+        color:aquamarine;
+        position:absolute;
+        left: 710px;
+    }
+}
+@keyframes aboutimg{
+    0%{
+       width:500px; 
+       position: absolute;
+       right: 0;
+
+        }
+        100%{
+            width: 500px;
+            position: absolute;
+            right: 780px;
+        }
+}
+@media (max-width:1150px) {
+
+    .menyu,
+    input {
+        display: inline-block;
+    }
+    .logo{
+        margin-top: -7px;
+    }
+    input{
+        position: absolute;
+        right: 25px;
+        top: 13px;
+    }
+    header {
+        padding: 7px 20px;
+        z-index: 123;
+    }
+  
+
+    .nav {
+        background-color: black;
+        top: 150px;
+        width: 40%;
+        height: 500px;
+        left: -1150px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        list-style: none;
+        position: absolute;
+        text-align: center;
+        
+        transition: all ease 1s;
+        
+        
+    }
+     header .container .nav a{
+        line-height: 125px;
+        
+    }
+
+    
+
+    input {
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+    }
+
+    .menyu {
+        position: absolute;
+        right: 60px;
+        top: 7px;
+
+    }
+    .menyu span{
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .menyu span:nth-child(1){
+        top: 7px;
+    }
+    .menyu span:nth-child(2){
+        top: 19px;
+    }
+    .menyu span:nth-child(3){
+        top: 32px;
+    }
+    input:checked~.nav{
+        left: 0px;
+    }
+}
+
+
+
+
+
+/* @media (max-width:1150px) {
+
+    .menyu,
+    input {
+        display: inline-block;
+    }
+    .logo{
+        margin-top: -7px;
+    }
+    input{
+        position: absolute;
+        right: 25px;
+        top: 13px;
+    }
+    header {
+        padding: 7px 20px;
+        z-index: 123;
+    }
+  
+
+    .nav {
+        background-color: black;
+        top: 150px;
+        width: 40%;
+        height: 500px;
+        right: 1150px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        list-style: none;
+        position: absolute;
+        text-align: center;
+        
+        transition: all ease 1s;
+        z-index: -1;
+        
+    }
+     header .container .nav a{
+        line-height: 125px;
+        
+    }
+    header .container .nav a:hover{
+        background-color: white;
+    }
+
+    
+
+    input {
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+    }
+
+    .menyu {
+        position: absolute;
+        right: 60px;
+        top: 7px;
+
+    }
+    .menyu span{
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .menyu span:nth-child(1){
+        top: 7px;
+    }
+    .menyu span:nth-child(2){
+        top: 19px;
+    }
+    .menyu span:nth-child(3){
+        top: 32px;
+    }
+    input:checked~.nav{
+        left: 0px;
+    } 
+} */
